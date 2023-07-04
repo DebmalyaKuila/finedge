@@ -1,0 +1,14 @@
+---
+import MainHead from "./MainHead.astro";
+const {title="FinEdge",description="FinEdge, a cutting-edge fintech startup focused on transforming cross-border payments"}=Astro.props;
+---
+
+<html lang="en">
+	<MainHead title={title} description={description}/>
+	<body >
+	<slot>
+        Default View
+    </slot>
+	</body>
+</html>
+

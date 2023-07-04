@@ -1,0 +1,52 @@
+---
+import Icon from "astro-icon";
+
+import NavBarData from "../data/NavBardata";
+import "../styles/navbar.css";
+---
+
+<nav class="flex justify-between items-start  navbar " >
+    <div>
+        <a href="/"><Icon name="logo" id="logo" /></a>
+    </div>
+    <div id="navmenu-div" >
+        <ul class="flex  nav-menu " >
+            {
+                NavBarData.map((item) => {
+                    return (
+                        <li class="navbar-items">
+                            <a href={item.path}>{item.name}</a>
+                        </li>
+                    );
+                })
+            }
+        </ul>
+    </div>
+    <div class="hamburger ">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</nav>
+
+<script>
+    const hamburgerEl=document.querySelector(".hamburger")
+    const navmenuEl=document.querySelector(".nav-menu")
+    const navbarEl=document.querySelector(".navbar")
+    const navmenudivEl=document.querySelector("#navmenu-div")
+    hamburgerEl.addEventListener("click",()=>{
+        hamburgerEl.classList.toggle("active");
+        navmenuEl.classList.toggle("active");
+        navmenudivEl.classList.toggle("active");
+        navbarEl.classList.toggle("active");
+
+    })
+    document.querySelectorAll(".navbar-items").forEach( (navitem) =>{
+            navitem.addEventListener("click",()=>{
+        hamburgerEl.classList.toggle("active");
+        navmenuEl.classList.toggle("active");
+        navmenudivEl.classList.toggle("active");
+        navbarEl.classList.toggle("active");
+            })
+    })
+</script>

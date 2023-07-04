@@ -1,0 +1,97 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<div id="contact" class="mt-32">
+    <div id="top" class=" flex justify-center my-10">
+        <div class="w-10/12">
+            <h3 class="text-3xl">Contact Us</h3>
+            <ul class="list-disc pl-10">
+                <li>
+                    Looking for a new or top-up loan - Email at <span
+                        class="text-orange-500"
+                        ><a href="#">easyloan@finedge.com</a></span>
+                </li>
+                <li>
+                    Interested in getting associated with Indifi Technologies to
+                    enhance your business, write to us at <span
+                        class="text-orange-500"
+                        ><a href="#">alliance@finedge.com</a></span>
+                </li>
+                <li>Existing customer? Please raise your query below:</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="bottom" class="flex justify-center items-start ">
+        <div id="left-contact" class="bg-slate-50 w-4/12 flex flex-col px-10 py-6">
+            <div class="flex justify-between items-center">
+                <div><p class="text-3xl">Send Us A Message</p></div>
+                <div><Icon name="ri:mail-send-line" width="40px" /></div>
+            </div>
+            <div>
+                <form id="form">
+                    <div class="flex flex-col py-4">
+                        <label for="name" class="text-xl">Your Name</label>
+                        <input type="text" name="name" id="name" class="
+                        w-9/12 px-4 py-2 rounded-md bg-slate-200 border-none outline-none text-lg"/>
+                    </div>
+                    <div  class="flex flex-col py-4">
+                        <label for="email" class="text-xl">Email ID</label>
+                        <input type="text" name="email" id="email" class="
+                        w-9/12 px-4 py-2 rounded-md bg-slate-200 border-none outline-none text-lg"/>
+                    </div>
+                    <div  class="flex flex-col py-4">
+                        <label for="msg" class="text-xl">Your Message</label>
+                        <textarea id="msg" placeholder="Enter your message here"
+                        rows="6"
+                        cols="50"
+                        class="
+                        w-10/12 px-4 py-2 rounded-md bg-slate-200 border-none outline-none text-lg"
+                        ></textarea>
+                        <button type="submit" class="w-10/12 py-4 px-4 my-6 text-xl font-bold text-white bg-blue-800 hover:bg-blue-900 rounded-md">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="right-contact" class="bg-blue-900 w-5/12 text-xl text-white mx-8 px-4 py-10">
+            <div class="py-8 ">
+                <h3 class="text-2xl">Contact Information</h3>
+            </div>
+        <div id="call" class="py-2"> 
+            <p>Call Us
+            <br>
+        <a href="tel:123-456-7890" class="text-orange-600">123-456-7890</a>
+            <br>
+        timings:10.00 a.m. to 7.00 p.m.(Monday to Friday excluding public holidays)</p>
+        </div>
+        <div id="mail" class="py-2">
+            <p>Email
+            <br>
+            <a href="#" class="text-orange-600">cs@finedge.com</a>
+            <br>
+            (To register a query, request or complaint related to loans facilitated by Indifi Technologies, please email on the above address.) </p>
+        </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    @media screen and (width<750px) {
+    #bottom {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+#left-contact{
+    width: 90%;
+}
+#right-contact{
+    margin-top: 20px;
+    width: 90%;
+}
+    }
+</style>
+
+<script src="../../JavaScript/Contact.js"></script>
